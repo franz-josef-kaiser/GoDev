@@ -1,6 +1,8 @@
-<h1 style="text-align: center;">
+<h1 align="center">
 	Simple Go & Docker dev stack
 </h1>
+
+Basic intro to _Go_ [with examples](https://gobyexample.com/).
 
 Run the stack
 
