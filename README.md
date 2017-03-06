@@ -2,9 +2,7 @@
 	Simple Go & Docker dev stack
 </h1>
 
-<p align="center">
-	Basic intro to _Go_ [with examples](https://gobyexample.com/).
-</p>
+Basic intro to _Go_ [with examples](https://gobyexample.com/).
 
 Run the stack
 
