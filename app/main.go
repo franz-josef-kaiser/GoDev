@@ -81,4 +81,12 @@ func main() {
     fmt.Println( "The contents now are:", loop )
     setloop := [5]string{"Another", "Loop", "With", "Preset", "Data"}
     fmt.Println( "A preset loop", setloop )
+
+    var multidem [2][3]int
+    for i := 0; i < 2; i++ {
+        for j := 0; j < 3; j++ {
+            multidem[ i ][ j ] = i + j
+        }
+    }
+    fmt.Println( "Multidimensional Array", multidem )
 }
