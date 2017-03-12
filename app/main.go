@@ -9,6 +9,7 @@ import (
 )
 
 func main() {
+	// Types and variables
 	var hello string = "Hello World"
 	fmt.Println( hello )
 
@@ -24,9 +25,11 @@ func main() {
 	var MC, ML, XXX = 1, 9, 80
 	fmt.Println( "Since when is the world yours?", MC, ML, XXX )
 
+	// Constants
 	const say string = "wat?!"
 	fmt.Println( "A constant is immutable!", say )
 
+	// Loops
 	fmt.Println( "\nLook, ma! I can haz count!" )
 	for i := 0; i < 3; i++ {
 		fmt.Println( i )
@@ -53,6 +56,7 @@ func main() {
 	fmt.Print( "\nPrint: This has no", spaces, "in the string" )
 	fmt.Println( "\nPrintln: This has", spaces, "in the string\n" )
 
+	// Switches and the built in time package
 	switch time.Now().Weekday() {
 	case time.Sunday, time.Saturday:
 		fmt.Println( "Weekend!" )
@@ -60,6 +64,7 @@ func main() {
 		fmt.Println( "Worktime… *sight*" )
 	}
 
+	// Functions and type switching
 	fmt.Println( "Defining for repition:\n" )
 	WhatAreYou := func(i interface{}) {
 		fmt.Println( "The type is…" )
@@ -76,6 +81,7 @@ func main() {
 	WhatAreYou( 1 )
 	WhatAreYou( "true" )
 
+	// Arrays
 	fmt.Println( "Let's try an array" )
 	var loop [5]int
 	fmt.Println( "The contents are:", loop )
@@ -93,6 +99,7 @@ func main() {
 	}
 	fmt.Println( "Multidimensional Array", multidem )
 
+	// Slices
 	fmt.Println( "\nNow we take a look at … Slices. Which are just a subtype of arrays." )
 	slice := make([]string, 3)
 	fmt.Println( "We declared a slice of type 'Array' with a length of", len( slice ), slice )
@@ -119,12 +126,21 @@ func main() {
 
 	fmt.Println( "\nAnother thing here: Maps" )
 
+	// Ranges
 	fmt.Println( "\nSlices and Ranges: Two different, but related things" )
 	fmt.Println( "Talking about ranges…" )
 	nums := [] int { 2, 3, 4 }
 	summedup := 0
+	fmt.Println( "If we omit the key/ index during an iteration, we only get the index" )
+	for num := range nums {
+		summedup += num
+		fmt.Println( "Iteration:", num )
+	}
+	fmt.Println( "Summed up, we got:", summedup )
+	fmt.Println( "Using a *blank identifier*, we can access the value of a range" )
 	for _, num := range nums {
 		summedup += num
+		fmt.Println( "Iteration:", num )
 	}
 	fmt.Println( "Summed up, we got:", summedup )
 }
