@@ -143,4 +143,10 @@ func main() {
 		fmt.Println( "Iteration:", num )
 	}
 	fmt.Println( "Summed up, we got:", summedup )
+	fmt.Println( "To access both key and value, we need to use a variabel" )
+	for index, num := range nums {
+		summedup += num
+		fmt.Println( "Iteration:", index, num )
+	}
+	fmt.Println( "Summed up, we got (by not resetting the var):", summedup )
 }
